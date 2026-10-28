@@ -30,11 +30,11 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.txtMontant = new System.Windows.Forms.TextBox();
+            this.numQuantite = new System.Windows.Forms.NumericUpDown();
             this.cmbReference = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDesignation = new System.Windows.Forms.TextBox();
+            this.txtPrix = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -59,7 +59,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numQuantite)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,11 +77,11 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.numericUpDown1);
+            this.groupBox1.Controls.Add(this.txtMontant);
+            this.groupBox1.Controls.Add(this.numQuantite);
             this.groupBox1.Controls.Add(this.cmbReference);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtDesignation);
+            this.groupBox1.Controls.Add(this.txtPrix);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
@@ -95,19 +95,20 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Saisir une ligne";
             // 
-            // textBox3
+            // txtMontant
             // 
-            this.textBox3.Location = new System.Drawing.Point(870, 107);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(161, 26);
-            this.textBox3.TabIndex = 9;
+            this.txtMontant.Location = new System.Drawing.Point(870, 107);
+            this.txtMontant.Name = "txtMontant";
+            this.txtMontant.Size = new System.Drawing.Size(161, 26);
+            this.txtMontant.TabIndex = 9;
             // 
-            // numericUpDown1
+            // numQuantite
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(578, 105);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(135, 26);
-            this.numericUpDown1.TabIndex = 8;
+            this.numQuantite.Location = new System.Drawing.Point(578, 105);
+            this.numQuantite.Name = "numQuantite";
+            this.numQuantite.Size = new System.Drawing.Size(135, 26);
+            this.numQuantite.TabIndex = 8;
+            this.numQuantite.ValueChanged += new System.EventHandler(this.numQuantite_ValueChanged);
             // 
             // cmbReference
             // 
@@ -118,19 +119,20 @@
             this.cmbReference.TabIndex = 7;
             this.cmbReference.SelectedIndexChanged += new System.EventHandler(this.cmbReference_SelectedIndexChanged);
             // 
-            // textBox2
+            // txtDesignation
             // 
-            this.textBox2.Location = new System.Drawing.Point(578, 43);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(453, 26);
-            this.textBox2.TabIndex = 6;
+            this.txtDesignation.Location = new System.Drawing.Point(578, 43);
+            this.txtDesignation.Name = "txtDesignation";
+            this.txtDesignation.Size = new System.Drawing.Size(453, 26);
+            this.txtDesignation.TabIndex = 6;
             // 
-            // textBox1
+            // txtPrix
             // 
-            this.textBox1.Location = new System.Drawing.Point(110, 104);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(277, 26);
-            this.textBox1.TabIndex = 5;
+            this.txtPrix.Location = new System.Drawing.Point(110, 104);
+            this.txtPrix.Name = "txtPrix";
+            this.txtPrix.Size = new System.Drawing.Size(277, 26);
+            this.txtPrix.TabIndex = 5;
+            this.txtPrix.TextChanged += new System.EventHandler(this.txtPrix_TextChanged);
             // 
             // label6
             // 
@@ -186,6 +188,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "NOUVEAU";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -356,9 +359,10 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Gestion Des Factures";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numQuantite)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -374,11 +378,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.TextBox txtMontant;
+        private System.Windows.Forms.NumericUpDown numQuantite;
         private System.Windows.Forms.ComboBox cmbReference;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDesignation;
+        private System.Windows.Forms.TextBox txtPrix;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
