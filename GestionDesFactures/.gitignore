@@ -1,0 +1,13 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.sln.docstates
+
+# Fichiers de compilation
+[Bb]in/
+[Oo]bj/
+
+# Fichiers temporaires
+*.tmp
+*.log
